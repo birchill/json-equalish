@@ -1,13 +1,13 @@
 A simplified version of deep-equal intended for comparing objects that are being
-serialized to/from JSON:
+serialized to/from JSON that:
 
-a)  Treats undefined as null as different
+1.  Treats undefined as null as different
     (since they produce different JSON output)
 
-b)  Treats a missing property and an undefined property as equal
+2.  Treats a missing property and an undefined property as equal
     (since they produce the same JSON output)
 
-c)  Only deals with POD for now since that's typically what you serialize and
+3.  Only deals with POD for now since that's typically what you serialize and
     trying to deal other types like deep-equal does can lead to lots of unwanted
     dependencies.
 
