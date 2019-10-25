@@ -1,6 +1,6 @@
 {
   "name": "@birchill/json-equalish",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ad-hoc JSON-like comparison",
   "author": "Brian Birtles",
   "scripts": {
@@ -50,11 +50,14 @@
     "bracketSpacing": true
   },
   "jest": {
-    "moduleFileExtensions": ["js", "ts"],
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
     "transform": {
       "^.+\\.ts?$": "ts-jest"
     },
-    "testRegex": "src\/.*.test.ts$",
+    "testRegex": "src/.*.test.ts$",
     "globals": {
       "ts-jest": {
         "tsConfig": {
