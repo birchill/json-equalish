@@ -33,8 +33,8 @@ function objEquiv(a: any, b: any) {
 
   // We only deal with POD at the moment.
   if (
-    (a.constructor !== Object && a.constructor !== Array) ||
-    (b.constructor !== Object && b.constructor !== Array)
+    (a.constructor && a.constructor !== Object && a.constructor !== Array) ||
+    (b.constructor && b.constructor !== Object && b.constructor !== Array)
   ) {
     throw new Error('Trying to compare something fancy');
   }

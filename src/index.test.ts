@@ -61,4 +61,15 @@ describe('jsonEqualish', () => {
       expect(jsonEqualish(a, b)).toBe(false);
     }
   });
+
+  it('should compare objects with a null prototype', () => {
+    const objA = Object.create(null);
+    objA.a = 123;
+
+    const objB = Object.create(null);
+    objB.a = 123;
+
+    expect(JSON.stringify(objA)).toEqual(JSON.stringify(objB));
+    expect(jsonEqualish(objA, objB)).toBe(true);
+  });
 });
