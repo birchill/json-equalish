@@ -22,6 +22,7 @@ describe('jsonEqualish', () => {
       [[], []],
       [{ a: [7, 8] }, { a: [7, 8] }],
       [{ a: { b: 2 } }, { a: { b: 2 } }],
+      [new Date('2020-01-10T12:31:32'), new Date('2020-01-10T12:31:32')]
     ];
 
     for (const [a, b] of pairs) {
@@ -53,6 +54,7 @@ describe('jsonEqualish', () => {
       [['a'], [1]],
       [[1, 2], [2, 1]],
       [{ a: { b: 2 } }, { a: { b: 3 } }],
+      [new Date('2020-01-10T12:31:32'), new Date('2020-01-10T12:31:33')]
     ];
 
     for (const [a, b] of pairs) {

@@ -27,6 +27,10 @@ function objEquiv(a: any, b: any) {
     return false;
   }
 
+  if (a instanceof Date) {
+    return b instanceof Date && a.getTime() == b.getTime();
+  }
+
   if (Array.isArray(a) !== Array.isArray(b)) {
     return false;
   }
