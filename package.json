@@ -28,7 +28,7 @@
     "lint-staged": "^9.4.2",
     "mocha": "^6.2.1",
     "prettier": "^1.18.2",
-    "standard-version": "^7.0.0",
+    "standard-version": "^8.0.1",
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.2.0",
     "typescript": "^3.6.4"
