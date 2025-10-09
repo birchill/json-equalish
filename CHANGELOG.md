@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.8](https://github.com/birchill/json-equalish/compare/v1.1.7...v1.1.8) (2025-10-09)
+
+
+### Bug Fixes
+
+* move husky to prepare lifecycle hook ([e6c524b](https://github.com/birchill/json-equalish/commit/e6c524b3a71096e7a9508373e69febb83a0a4778))
+
 ## [1.1.7](https://github.com/birchill/json-equalish/compare/v1.1.6...v1.1.7) (2025-10-09)
 
 
