@@ -25,16 +25,3 @@ projects care about supporting IE.
 In fact, if you're reading this, you probably shouldn't use it. It's basically
 just trying to compare the result of `JSON.stringify()` on two objects but
 allowing the order of keys to differ.
-
-## Publishing
-
-```
-yarn release
-git push --follow-tags origin master
-yarn publish
-yarn publish --registry https://npm.pkg.github.com
-```
-
-We need to publish to both NPM and GitHub because we're using the same scope,
-`@birchill` in both places 🤦. (GitHub package registry doesn't seem to let you
-change it from the org name and we were already using `@birchill` on npm.)

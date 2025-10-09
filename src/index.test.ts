@@ -1,3 +1,5 @@
+import { describe, it, expect } from 'vitest';
+
 import { jsonEqualish } from './index';
 
 describe('jsonEqualish', () => {
@@ -18,11 +20,14 @@ describe('jsonEqualish', () => {
       [{ a: 'abc', b: undefined }, { a: 'abc' }],
       [{ a: 1 }, { a: 1 }],
       [[1], [1]],
-      [[1, 2], [1, 2]],
+      [
+        [1, 2],
+        [1, 2],
+      ],
       [[], []],
       [{ a: [7, 8] }, { a: [7, 8] }],
       [{ a: { b: 2 } }, { a: { b: 2 } }],
-      [new Date('2020-01-10T12:31:32'), new Date('2020-01-10T12:31:32')]
+      [new Date('2020-01-10T12:31:32'), new Date('2020-01-10T12:31:32')],
     ];
 
     for (const [a, b] of pairs) {
@@ -33,7 +38,12 @@ describe('jsonEqualish', () => {
   });
 
   it('should compare objects as the same even when their object key order differs', () => {
-    const pairs = [[{ a: 1, b: 2 }, { b: 2, a: 1 }]];
+    const pairs = [
+      [
+        { a: 1, b: 2 },
+        { b: 2, a: 1 },
+      ],
+    ];
 
     for (const [a, b] of pairs) {
       // Sanity check our understanding of JSON
@@ -46,15 +56,24 @@ describe('jsonEqualish', () => {
     const pairs = [
       [{ a: null }, { a: undefined }],
       [{ a: 1 }, { a: 2 }],
-      [{ a: 1, b: 2 }, { b: 1, a: 2 }],
-      [{ a: 1, b: 2 }, { a: 2, b: 1 }],
+      [
+        { a: 1, b: 2 },
+        { b: 1, a: 2 },
+      ],
+      [
+        { a: 1, b: 2 },
+        { a: 2, b: 1 },
+      ],
       [[1], [2]],
       [[1], [1, 2]],
       [[1, 2], [1]],
       [['a'], [1]],
-      [[1, 2], [2, 1]],
+      [
+        [1, 2],
+        [2, 1],
+      ],
       [{ a: { b: 2 } }, { a: { b: 3 } }],
-      [new Date('2020-01-10T12:31:32'), new Date('2020-01-10T12:31:33')]
+      [new Date('2020-01-10T12:31:32'), new Date('2020-01-10T12:31:33')],
     ];
 
     for (const [a, b] of pairs) {
