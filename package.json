@@ -6,9 +6,8 @@
   "scripts": {
     "build": "tsdown",
     "test": "vitest run",
-    "prepublishOnly": "pinst --disable && tsdown",
-    "postinstall": "husky",
-    "postpublish": "pinst --enable"
+    "prepare": "tsdown",
+    "postinstall": "husky"
   },
   "repository": {
     "type": "git",
