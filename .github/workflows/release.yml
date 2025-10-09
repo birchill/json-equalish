@@ -1,11 +1,18 @@
+name: Release
 on:
   push:
     branches:
       - main
 
-name: Release
+permissions:
+  contents: write # to create release
+  id-token: write # required for provenance and OIDC publish
+  pull-requests: write # to create pull request
+
 jobs:
-  Release:
+  release:
+    if: github.repository == 'birchill/json-equalish'
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
@@ -29,9 +36,15 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           cache: pnpm
 
+      # Temporary until setup-node action comes with npm version that contains
+      # OIDC setup by default
+      - name: update npm
+        if: ${{ steps.release.outputs.release_created }}
+        run: npm update -g npm
+
       - name: Install dependencies
         if: ${{ steps.release.outputs.release_created }}
         run: pnpm install
 
-      - run: pnpm publish --access public
+      - run: npm publish --access public
         if: ${{ steps.release.outputs.release_created }}
