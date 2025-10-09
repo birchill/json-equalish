@@ -7,7 +7,7 @@
     "build": "tsdown",
     "test": "vitest run",
     "prepublishOnly": "tsdown",
-    "postinstall": "husky"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
