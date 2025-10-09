@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.4](https://github.com/birchill/json-equalish/compare/v1.1.3...v1.1.4) (2025-10-09)
+
+
+### Miscellaneous Chores
+
+* release 1.1.4 ([76fda7d](https://github.com/birchill/json-equalish/commit/76fda7da67ed9442a34261894bb8e95e16a84498))
+
 ## [1.1.3](https://github.com/birchill/json-equalish/compare/v1.1.2...v1.1.3) (2025-10-09)
 
 
