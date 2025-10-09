@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsdown",
     "test": "vitest run",
-    "prepare": "tsdown",
+    "prepublishOnly": "tsdown",
     "postinstall": "husky"
   },
   "repository": {
