@@ -1,7 +1,7 @@
 A simplified version of deep-equal intended for comparing objects that are being
 serialized to/from JSON that:
 
-1.  Treats undefined as null as different
+1.  Treats undefined and null as different
     (since they produce different JSON output)
 
 2.  Treats a missing property and an undefined property as equal
