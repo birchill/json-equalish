@@ -31,11 +31,11 @@
   "homepage": "https://github.com/birchill/json-equalish#readme",
   "devDependencies": {
     "husky": "9.1.7",
-    "lint-staged": "16.2.3",
-    "prettier": "3.6.2",
-    "tsdown": "0.15.6",
-    "typescript": "5.9.3",
-    "vitest": "3.2.4"
+    "lint-staged": "17.0.7",
+    "prettier": "3.8.3",
+    "tsdown": "0.22.1",
+    "typescript": "6.0.3",
+    "vitest": "4.1.8"
   },
   "husky": {
     "hooks": {
