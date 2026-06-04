@@ -25,9 +25,9 @@ jobs:
 
       - name: Install pnpm
         if: ${{ steps.release.outputs.release_created }}
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
-          version: latest
+          version: 11
 
       - uses: actions/setup-node@v5
         if: ${{ steps.release.outputs.release_created }}
