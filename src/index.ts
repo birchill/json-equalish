@@ -70,7 +70,5 @@ function objEquiv(a: any, b: any) {
 }
 
 function definedKeys(a: any) {
-  return Object.keys(a).filter(key => typeof a[key] !== 'undefined');
+  return Object.keys(a).filter((key) => typeof a[key] !== 'undefined');
 }
-
-export default jsonEqualish;
