@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/birchill/json-equalish/compare/v1.1.8...v2.0.0) (2026-06-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop default export
+
+### Bug Fixes
+
+* drop default export ([331584b](https://github.com/birchill/json-equalish/commit/331584b2748fcfbc050c4a1555f9f3af134d8d44))
+
 ## [1.1.8](https://github.com/birchill/json-equalish/compare/v1.1.7...v1.1.8) (2025-10-09)
 
 
