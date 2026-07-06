@@ -5,6 +5,7 @@
   "author": "Brian Birtles",
   "scripts": {
     "build": "tsdown",
+    "ci:publish": "pnpm changeset publish",
     "test": "vitest run",
     "prepublishOnly": "tsdown",
     "prepare": "husky"
@@ -30,6 +31,7 @@
   },
   "homepage": "https://github.com/birchill/json-equalish#readme",
   "devDependencies": {
+    "@changesets/cli": "2.31.0",
     "husky": "9.1.7",
     "lint-staged": "17.0.7",
     "prettier": "3.8.3",
