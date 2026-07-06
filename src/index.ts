@@ -35,11 +35,9 @@ function objEquiv(a: any, b: any) {
     return false;
   }
 
-  // We only deal with POD at the moment.
-  if (
-    (a.constructor && a.constructor !== Object && a.constructor !== Array) ||
-    (b.constructor && b.constructor !== Object && b.constructor !== Array)
-  ) {
+  // We only deal with POD at the moment. Use the prototype rather than reading
+  // the constructor property since proxies can expose that differently.
+  if (!isPlainObjectOrArray(a) || !isPlainObjectOrArray(b)) {
     throw new Error('Trying to compare something fancy');
   }
 
@@ -71,4 +69,13 @@ function objEquiv(a: any, b: any) {
 
 function definedKeys(a: any) {
   return Object.keys(a).filter((key) => typeof a[key] !== 'undefined');
+}
+
+function isPlainObjectOrArray(value: any) {
+  if (Array.isArray(value)) {
+    return true;
+  }
+
+  const prototype = Object.getPrototypeOf(value);
+  return prototype === Object.prototype || prototype === null;
 }

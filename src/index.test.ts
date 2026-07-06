@@ -83,6 +83,23 @@ describe('jsonEqualish', () => {
     }
   });
 
+  it('should not rely on constructor identity when checking plain objects', () => {
+    const proxy = new Proxy(
+      { a: 123 },
+      {
+        get(target, property, receiver) {
+          if (property === 'constructor') {
+            return function CustomObject() {};
+          }
+
+          return Reflect.get(target, property, receiver);
+        },
+      }
+    );
+
+    expect(jsonEqualish(proxy, { a: 123 })).toBe(true);
+  });
+
   it('should compare objects with a null prototype', () => {
     const objA = Object.create(null);
     objA.a = 123;
