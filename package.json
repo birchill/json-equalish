@@ -1,6 +1,6 @@
 {
   "name": "@birchill/json-equalish",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Ad-hoc JSON-like comparison",
   "author": "Brian Birtles",
   "scripts": {
