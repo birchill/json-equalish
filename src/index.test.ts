@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 
-import { jsonEqualish } from './index';
+import { jsonEqualish } from './index.js';
 
 describe('jsonEqualish', () => {
   it('should compare various things as the same', () => {
